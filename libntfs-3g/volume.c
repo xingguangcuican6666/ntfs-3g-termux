@@ -1525,10 +1525,11 @@ static int ntfs_mntent_check(const char *file, unsigned long *mnt_flags)
 	*mnt_flags = NTFS_MF_MOUNTED;
 	if (!strcmp(mnt->mnt_dir, "/"))
 		*mnt_flags |= NTFS_MF_ISROOT;
-#ifdef HAVE_HASMNTOPT
+/*#ifdef HAVE_HASMNTOPT
 	if (hasmntopt(mnt, "ro") && !hasmntopt(mnt, "rw"))
 		*mnt_flags |= NTFS_MF_READONLY;
 #endif
+*/
 exit:
 	free(real_file);
 	free(real_fsname);

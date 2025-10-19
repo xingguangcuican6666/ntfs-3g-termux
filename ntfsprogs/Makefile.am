@@ -181,11 +181,11 @@ extras:	libs $(EXTRA_PROGRAMS)
 if ENABLE_MOUNT_HELPER
 install-exec-hook:
 	$(INSTALL) -d $(DESTDIR)/$(sbindir)
-	$(LN_S) -f $(sbindir)/mkntfs $(DESTDIR)$(sbindir)/mkfs.ntfs
+	$(LN_S) -sf $(sbindir)/mkntfs $(DESTDIR)$(sbindir)/mkfs.ntfs
 
 install-data-hook:
 	$(INSTALL) -d $(DESTDIR)$(man8dir)
-	$(LN_S) -f mkntfs.8 $(DESTDIR)$(man8dir)/mkfs.ntfs.8
+	$(LN_S) -sf mkntfs.8 $(DESTDIR)$(man8dir)/mkfs.ntfs.8
 
 uninstall-local:
 	$(RM) -f $(DESTDIR)/sbin/mkfs.ntfs

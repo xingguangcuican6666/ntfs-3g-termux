@@ -18,8 +18,8 @@ endif
 
 if ENABLE_NTFS_3G
 
-bin_PROGRAMS	 = ntfs-3g.probe
-rootbin_PROGRAMS = ntfs-3g lowntfs-3g
+bin_PROGRAMS	 = ntfs-3g.probe ntfs-3g lowntfs-3g
+rootbin_PROGRAMS = 
 rootsbin_DATA 	 = #Create directory
 man_MANS	 = ntfs-3g.8 ntfs-3g.probe.8
 
